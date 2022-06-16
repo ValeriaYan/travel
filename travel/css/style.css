@@ -47,6 +47,15 @@ a {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
 }
 
+.title {
+    margin: 0;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 53px;
+    color: #F2785C;
+    text-transform: uppercase;
+}
+
 /*------------------------------------------------------ HEADER-------------------------------------------- */
 .header {
     background-color: rgba(242, 120, 92, 0.7);
@@ -149,4 +158,45 @@ a {
     font-size: 24px;
     line-height: 32px;
     flex: 0 0 auto;
+}
+
+/* ---------------------------------------------------------STEPS-------------------------------------------------------------- */
+
+.steps {
+    padding-top: 80px;
+}
+
+.steps__title {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.steps__row {
+    display: flex;
+}
+
+.steps__item {
+    flex: 0 1 33.34%;
+    text-align: center;
+}
+
+.steps__item:first-child {
+    padding-right: 140px;
+}
+
+.steps__item:last-child {
+    padding-left: 70px;
+}
+
+.steps__icon {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.steps__text {
+    margin-top: 26px;
+    font-family: 'Aleo', serif;
+    font-size: 20px;
+    line-height: 24px;
+    color: #0D606F;
 }
