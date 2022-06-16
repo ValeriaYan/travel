@@ -47,6 +47,14 @@ a {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
 }
 
+.button_arrow::before {
+    content: url(../img/arrow.svg);
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -40%);
+    left: 32px;
+}
+
 .title {
     margin: 0;
     font-weight: 500;
@@ -199,4 +207,95 @@ a {
     font-size: 20px;
     line-height: 24px;
     color: #0D606F;
+}
+
+/* ------------------------------------------------DESTINATIONS--------------------------------------- */
+.destinations {
+    padding-top: 75px;
+}
+
+.destinations__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+.destinations__title {
+    margin-bottom: 46px;
+    text-align: center;
+}
+
+.destinations__row{
+    position: relative;
+    height: 800px;
+    margin-bottom: 24px;
+}
+.destinations__slider {
+    position: absolute;
+    right: 50%;
+    transform: translate(50%, 0);
+    display: flex;
+    justify-content: space-between;
+    min-width: 2520px;
+}
+
+.destinations__photo {
+    position: relative;
+}
+
+.destinations__img {
+}
+
+.destinations__text {
+    position: absolute;
+    bottom: 45px;
+    left: 15px;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 42px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.destinations__switch {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.radio {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 3px;
+}
+
+.radio__input {
+    position: absolute;
+    appearance: none;
+}
+
+.radio__box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(242, 120, 92, 0.5);
+    border-radius: 50%;
+}
+
+.radio__input:checked + .radio__box {
+    
+    background-color: #F2785C;
+}
+
+.destinations__button {
+    position: relative;
+    padding-left: 81px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
 }

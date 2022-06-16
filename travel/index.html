@@ -67,15 +67,35 @@
         <section class="destinations">
             <div class="destinations__container">
                 <h2 class="destinations__title title">Popular destinations</h2>
-                <div class="destinations__slider">
-                    <img class="destinations__img" src="./img/destinations-sea.jpg" alt="photo Spain">
-                    <img class="destinations__img" src="./img/destinations-jap.jpg" alt="photo Japan">
-                    <img class="destinations__img" src="./img/destinations-usa.jpg" alt="photo USA">
+                <div class="destinations__row">
+                    <div class="destinations__slider">
+                        <div class="destinations__photo">
+                            <img class="destinations__img" src="./img/destinations-sea.jpg" alt="photo Spain">
+                            <span class="destinations__text">Spain</span>
+                        </div>
+                        <div class="destinations__photo">
+                            <img class="destinations__img" src="./img/destinations-jap.jpg" alt="photo Japan">
+                            <span class="destinations__text">Japan</span>
+                        </div>
+                        <div class="destinations__photo">
+                            <img class="destinations__img" src="./img/destinations-usa.jpg" alt="photo USA">
+                            <span class="destinations__text">Usa</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="destinations__switch">
-                    <input class="destinations__radio" type="radio" name="switch" value="spain">
-                    <input class="destinations__radio" type="radio" name="switch" value="japan" checked>
-                    <input class="destinations__radio" type="radio" name="switch" value="usa">
+                    <label class="destinations__radio radio">
+                        <input class="radio__input" type="radio" name="switch" value="spain">
+                        <div class="radio__box"></div>
+                    </label>
+                    <label class="destinations__radio radio">
+                        <input class="radio__input" type="radio" name="switch" value="spain" checked>
+                        <div class="radio__box"></div>
+                    </label>
+                    <label class="destinations__radio radio">
+                        <input class="radio__input" type="radio" name="switch" value="spain">
+                        <div class="radio__box"></div>
+                    </label>
                 </div>
                 <button class="destinations__button button button_arrow">Find More</button>
             </div>
