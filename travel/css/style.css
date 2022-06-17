@@ -317,13 +317,14 @@ a {
     z-index: 1;
     background-image: url(../img/stories-background.jpg);
     background-size: cover;
+    background-position: bottom -61px left;
     opacity: 0.3;
 }
 
 .stories__container {
     position: relative;
     z-index: 2;
-    padding-bottom: 102px;
+    padding-bottom: 41px;
 }
 
 .stories__title {
@@ -389,4 +390,56 @@ a {
 
 .stories__button {
     text-align: center;
+}
+
+/* ------------------------------------------------------FOOTER--------------------------------------------------- */
+
+.footer {
+    background-image: url(../img/stories-background.jpg);
+    background-position: bottom;
+    background-size: cover;
+    color: #ffffff;
+}
+
+.footer__container {
+    display: flex;
+    align-items: center;
+    height: 61px;
+}
+
+.footer__copy {
+    flex: 1 1 auto;
+    text-align: right;
+    padding-left: 100px;
+    font-weight: 500;
+    line-height: 21px;
+}
+
+.footer__links {
+    flex: 0 1 470px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer__link {
+    display: block;
+    width: 34px;
+    height: 34px;
+    margin-right: 20px;
+}
+
+.footer__link:last-child {
+    margin-right: 0;
+}
+
+.footer__link:nth-child(1) {
+    background-image: url(../img/footer-icons-inst.svg);
+}
+
+.footer__link:nth-child(2) {
+    background-image: url(../img/footer-icons-video.svg);
+}
+
+.footer__link:nth-child(3) {
+    background-image: url(../img/footer-icons-twitter.svg);
 }
