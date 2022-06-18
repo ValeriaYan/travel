@@ -9,7 +9,7 @@ html {
 
 body {
     margin: 0;
-    min-width: 735px;
+    min-width: 1440px;
 }
 
 .wrapper {
@@ -93,7 +93,7 @@ a {
     background-color: rgba(242, 120, 92, 0.7);
     position: absolute;
     width: 100%;
-    min-width: 735px;
+    min-width: 1440px;
     box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
 }
 
