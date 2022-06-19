@@ -332,6 +332,7 @@ a {
     background-color: rgba(242, 120, 92, 0.5);
     border-radius: 50%;
     transition: all 0.2s ease;
+    cursor: pointer;
 }
 
 .radio__input:checked + .radio__box {
@@ -440,6 +441,10 @@ a {
 
 .stories__button {
     text-align: center;
+}
+
+.stories__button button {
+    padding-right: 42px;
 }
 
 /* ------------------------------------------------------FOOTER--------------------------------------------------- */
