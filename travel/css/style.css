@@ -134,6 +134,7 @@ a {
     font-weight: 500;
     line-height: 21px;
     color: #ffffff;
+    transition: all 0.2s ease;
 }
 
 .nav__link:hover {
@@ -451,6 +452,7 @@ a {
     line-height: 24px;
     text-decoration-line: underline;
     color: #0D606F;
+    transition: all 0.2s ease;
 }
 
 .article__link:hover {
