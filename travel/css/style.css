@@ -76,11 +76,17 @@ a {
 }
 
 .button_arrow::before {
-    content: url(../img/arrow.svg);
+    content: "";
     position: absolute;
-    top: 50%;
-    transform: translate(0, -40%);
+    top: 10px;
     left: 32px;
+    background-image: url(../img/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 40px;
+    height: 40px;
+
 }
 
 .title {
@@ -93,15 +99,82 @@ a {
 }
 
 @media (max-width: 768px){
+    :root {
+        --blocks-padding-top: 60px;
+    }
+
     .button {
         font-size: 20px;
+        line-height: 28px;
+    }
+
+    .button_arrow::before {
+        width: 30px;
+        height: 30px;
+        top: 13px;
+    }
+
+    .title {
+        font-size: 32px;
+        line-height: 45px;
     }
 }
 
 @media (max-width: 576px) {
+    :root {
+        --blocks-padding-top: 40px;
+    }
+
     .button {
         font-size: 16px;
+        line-height: 24px;
+        padding: 10px 14px;
     }
+
+    .button_arrow::before {
+        width: 20px;
+        height: 20px;
+        top: 12px;
+        left: 16px;
+    }
+
+    .button.button_arrow {
+        padding-left: 50px;
+    }
+
+    .title {
+        font-size: 22px;
+        line-height: 26px;
+    }
+}
+
+@media (max-width: 390px) {
+    :root {
+        --blocks-padding-top: 20px;
+    }
+
+    .button {
+        font-size: 11px;
+        line-height: 15px;
+        padding: 7.5px 12px;
+    }
+
+    .button_arrow::before {
+        width: 10px;
+        height: 10px;
+        top: 10px;
+        left: 14px;
+    }
+
+    .button.button_arrow {
+        padding-left: 30px;
+    }
+
+    .title {
+        font-size: 14px;
+        line-height: 18.5px;
+    }
+
 }
 
 /*------------------------------------------------------ HEADER-------------------------------------------- */
@@ -521,7 +594,7 @@ a {
 .steps__item {
     display: flex;
     flex-direction: column;
-    flex: 0 1 33.34%;
+    flex: 0 1 33.33%;
 }
 
 .steps__item:nth-child(1) {
@@ -558,6 +631,95 @@ a {
     color: #0D606F;
 }
 
+@media (max-width: 992px) {
+    .steps__item:nth-child(1) .steps__wrap {
+        text-align: left;
+    }
+
+    .steps__item:nth-child(3) .steps__wrap {
+        text-align: right;
+    }
+}
+
+@media (max-width: 768px) {
+    .steps__title {
+        margin-bottom: 30px;
+    }
+    
+    .steps__container {
+        padding: 0 20px;
+    }
+
+    .steps__picture {
+        width: 90px;
+        height: 90px;
+    }
+
+    .steps__picture img {
+        width: 40px;
+    }
+
+    .steps__text {
+        font-size: 16px;
+        line-height: 20px;
+        margin-top: 19px;
+        margin-bottom: 0;
+    }
+
+    .steps__item:nth-child(1) .steps__wrap .steps__text {
+        max-width: 94px;
+    }
+
+    .steps__item:nth-child(3) .steps__wrap .steps__picture img {
+        width: 35px;
+    }
+}
+
+@media (max-width: 576px) {
+    .steps__picture {
+        width: 80px;
+        height: 80px;
+    }
+
+    .steps__picture img {
+        width: 35px;
+    }
+
+    .steps__text {
+        font-size: 14px;
+        line-height: 18px;
+        margin-top: 19px;
+        margin-bottom: 0;
+    }
+
+    .steps__item:nth-child(3) .steps__wrap .steps__picture img {
+        width: 40px;
+    }
+}
+
+@media (max-width: 390px) {
+    .steps__title {
+        margin-bottom: 20px;
+    }
+    
+    .steps__container {
+        padding: 0 15px;
+    }
+
+    .steps__picture {
+        width: 70px;
+        height: 70px;
+    }
+
+    .steps__text {
+        font-size: 10px;
+        line-height: 12px;
+        margin-top: 19px;
+        margin-bottom: 0;
+    }
+
+
+}
 /* ------------------------------------------------DESTINATIONS--------------------------------------- */
 .destinations {
     padding-top: var(--blocks-padding-top);
@@ -706,7 +868,7 @@ a {
 }
 
 .article__content {
-    flex: 1 1 auto;
+    flex: 1 1 66.66%;
     padding: 0 0 0 40px;
     color: #0D606F;
 }
@@ -751,6 +913,18 @@ a {
 
 .stories__button button {
     padding-right: 42px;
+}
+
+@media (max-width: 576px) {
+    .stories__button button {
+        padding-right: 12px;
+    }
+}
+
+@media (max-width: 390px) {
+    .stories__button button {
+        padding-right: 12px;
+    }
 }
 
 /* ------------------------------------------------------FOOTER--------------------------------------------------- */
