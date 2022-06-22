@@ -92,6 +92,17 @@ a {
     text-transform: uppercase;
 }
 
+@media (max-width: 768px){
+    .button {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .button {
+        font-size: 16px;
+    }
+}
 
 /*------------------------------------------------------ HEADER-------------------------------------------- */
 .header {
@@ -212,12 +223,14 @@ a {
     .header {
         background-color: rgba(242, 120, 92, 0);
         box-shadow: none;
-        /* overflow: hidden; */
+        overflow: hidden;
+        min-height: 251px;
     }
-
+    
     .header__container {
         min-height: 0;
-        padding-top: 43px
+        padding-top: 43px;
+        background-image: linear-gradient(to bottom, rgba(13, 96, 111, 1), rgba(13, 96, 11, 0) 65%);
     }
 
     .header__logo img {
@@ -235,6 +248,7 @@ a {
     .header__burger {
         display: inline-block;
         padding: 8px 5px;
+        cursor: pointer;
     }
     
     .header__burger > span{
@@ -250,14 +264,13 @@ a {
         display: inline-block;
         position: absolute;
         top: 0;
-        right: 100%;
-        transition: all 0.3s ease;
+        right: -100%;
+        transition: all 0.5s ease;
     }
     
     .header__navbar._active {
         right: 0;
-        transition: all 0.3s ease;
-        
+        transition: all 0.5s ease;
     }
 
     .navbar {
@@ -270,6 +283,7 @@ a {
         width: 15px;
         height: 15px;
         position: relative;
+        cursor: pointer;
     }
     .navbar__x::before {
         content: "";
@@ -298,8 +312,8 @@ a {
     }
 
     .navbar__list {
-        padding-left: 29px;
-        padding-bottom: 15px;
+        margin: 0;
+        padding: 15px 0 15px 29px; 
         text-align: end;
     }
 
@@ -386,6 +400,104 @@ a {
     flex: 0 0 auto;
 }
 
+@media (max-width: 1140px) {
+    .preview {
+        min-height: 650px;
+    }
+}
+
+@media (max-width: 992px) {
+    .preview__title {
+        max-width: 600px;
+        font-size: 64px;
+    }
+}
+
+@media (max-width: 768px) {
+    .preview__text {
+        font-size: 16px;
+    }
+
+    .preview__input {
+        font-size: 20px;
+    }
+
+    .preview__input::placeholder {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 587px) {
+    .preview__text {
+        display: none;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .preview {
+        min-height: 550px;
+    }
+    
+    .preview__title {
+        font-size: 48px;
+    }
+    
+    .preview__form {
+        padding: 16px;
+    }
+
+    .preview__button {
+        padding: 7.5px 9px;
+    }
+
+    .preview__input {
+        margin-left: 0;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    
+    .preview__input::placeholder {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+@media (max-width: 390px) {
+    .preview {
+        background-image: url("../img/preview-background390.jpg");        
+        background-position: center;
+        background-size: cover;
+        padding-top: 142px;
+        min-height: 251px;
+    }
+
+    .preview__title {
+        display: none;
+    }
+
+    .preview__form {
+        padding: 9px;
+    }
+
+    .preview__input {
+        font-size: 14px;
+        line-height: 17px;
+        margin-left: 5px;
+    }
+    
+    .preview__input::placeholder {
+        font-size: 14px;
+        line-height: 17px;
+    }
+    
+    .preview__button {
+        font-size: 11px;
+        line-height: 15px;
+        
+    }
+
+}
 /* ---------------------------------------------------------STEPS-------------------------------------------------------------- */
 
 .steps {
