@@ -178,6 +178,10 @@ a {
 }
 
 /*------------------------------------------------------ HEADER-------------------------------------------- */
+.wrapper__header {
+    position: relative;
+}
+
 .header {
     background-color: rgba(242, 120, 92, 0.7);
     position: absolute;
@@ -293,11 +297,16 @@ a {
 }
 
 @media (max-width: 390px) {
+    .wrapper__header {
+        overflow: hidden;
+        min-height: 251px;
+    }
+
     .header {
         background-color: rgba(242, 120, 92, 0);
         box-shadow: none;
-        overflow: hidden;
-        min-height: 251px;
+        /* overflow: hidden;
+        min-height: 251px; */
     }
     
     .header__container {
