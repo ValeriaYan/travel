@@ -768,10 +768,12 @@ a {
 .destinations__img {
     max-width: 100%;
     border-radius: 16px;
+    object-fit: cover;
 }
 
 .destinations__img-small {
     display: none;
+    object-fit:cover;
 }
 
 .destinations__text {
@@ -852,30 +854,30 @@ a {
         z-index: 99;
         background-image: url(../img/slider-arrow-right.svg);
     }
-
+    
     .destinations__photo {
         max-width: 600px;
         max-height: 400px;
     }
-
+    
     .radio {
         width: 15px;
         height: 15px;
         margin: 0 5px;
     }
-
+    
     .radio__box {
         width: 18px;
         height: 18px;
     }
-
+    
     .destinations__switch {
         left: 50%;
         transform: translate(-50%, 0);
         bottom: 10px;
         margin: 0 0 8px 0;
     }
-
+    
     .destinations__text {
         top: 16px;
         left: 15px;
@@ -888,39 +890,40 @@ a {
     .destinations__row {
         min-height: 350px;
     }
-
+    
     .destinations__photo {
         max-width: 480px;
         max-height: 350px;
     }
-
+    
     .radio {
         width: 12px;
         height: 12px;
     }
-
+    
     .radio__box {
         width: 12px;
         height: 12px;
     }
-
+    
     .destinations__switch {
         left: 50%;
         transform: translate(-50%, 0);
         bottom: 0;
         margin: 0 0 8px 0;
     }
-
+    
     .destinations__text {
         top: 16px;
         left: 15px;
         font-size: 28px;
         line-height: 26px;
     }
-
+    
 }
 
 @media (max-width: 500px) {
+
     .destinations__title {
         margin-bottom: 22px;
     }
@@ -941,17 +944,19 @@ a {
 
     .destinations__img-small {
         display: block;
+        object-position: center;
+        width: 360;
     }
 
     .radio {
-        width: 7px;
-        height: 7px;
-        margin: 0 2px;
+        width: 8px;
+        height: 8px;
+        margin: 0 1px;
     }
 
     .radio__box {
-        width: 7px;
-        height: 7px;
+        width: 8px;
+        height: 8px;
     }
 
     .destinations__text {
@@ -959,6 +964,44 @@ a {
         left: 15px;
         font-size: 20px;
         line-height: 26px;
+    }
+
+}
+
+@media (width: 390px) {
+    .destinations__slider {
+        left: 15px;
+        transform: none;
+    }
+
+    .destinations__row::before {
+        opacity: 0.5;
+    }
+
+    .destinations__radio:nth-child(1) .radio__box {
+        background-color: #F2785C;
+    }
+
+    .destinations__radio:nth-child(2) .radio__box {
+        opacity: 0.6;
+    }
+
+}
+
+@media (max-width: 360px) {
+    .destinations__row {
+        min-height: 210px;
+        margin-bottom: 10px;
+    }
+
+    .destinations__photo {
+        max-width: 300px;
+        max-height: 210px;
+    }
+
+    .destinations__img-small {
+        object-position: center;
+        width: 300px;
     }
 
 }
