@@ -1325,3 +1325,26 @@ a {
 .link_twit {
     background-image: url(../img/footer-icons-twitter.svg);
 }
+
+@media (max-width: 862px) {
+    
+    .footer__copy {
+        display: none;
+    }
+
+    .footer__links {
+        flex: 0 1 100%;
+        justify-content: center;
+    }
+
+    .footer__link:nth-child(1) {
+        margin-left: 6px;
+    }
+}
+
+@media (max-width: 390px) {
+    .footer {
+        background-image: url(../img/stories-background-390.jpg);
+    }
+    
+}
