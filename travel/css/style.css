@@ -13,7 +13,6 @@ html {
 
 body {
     margin: 0;
-    /* min-width: 1420px; */
 }
 
 .wrapper {
@@ -186,7 +185,6 @@ a {
     position: absolute;
     left: 0;
     right: 0;
-    /* min-width: 1420px; */
     box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
 }
 
@@ -198,6 +196,11 @@ a {
 }
 .header__logo {
     display: flex;
+    transition: all 0.5s ease;
+}
+
+.header__logo:hover {
+    transform: scale(1.1);
 }
 
 .header__logo img{
@@ -223,18 +226,27 @@ a {
 }
 
 .nav__link {
+    position: relative;
     font-weight: 500;
     line-height: 21px;
     color: #ffffff;
     transition: all 0.2s ease;
 }
 
-.nav__link:hover {
-    color: #0D606F;
+.nav__link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 1px;
+    background-color: #ffffff;
+    transition: all 0.5s ease;
 }
 
-.nav__link:active {
-    color:#d6d6d6;
+.nav__link:hover::before {
+    width: 100%;
 }
 
 .header__button {
@@ -1107,11 +1119,7 @@ a {
 }
 
 .article__link:hover {
-    color: #189bb3;
-}
-
-.article__link:active {
-    color: #0c4a55;
+    color: #F2785C;
 }
 
 .stories__button {
@@ -1300,6 +1308,11 @@ a {
 
 .footer__link {
     margin-right: 20px;
+    transition: all 0.5s ease;
+}
+
+.footer__link:hover {
+    transform: scale(1.2);
 }
 
 .footer__link:last-child {
