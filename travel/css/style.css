@@ -101,6 +101,10 @@ a {
         --blocks-padding-top: 60px;
     }
 
+    .container {
+        padding: 0 15px;
+    }
+
     .button {
         font-size: 20px;
         line-height: 28px;
@@ -216,9 +220,12 @@ a {
     color: #FFFFFF;
 }
 
+.header__nav {
+    margin-left: 8px;
+}
+
 .nav__list {
     display: flex;
-    margin-left: 8px;
 }
 
 .nav__item {
@@ -265,6 +272,10 @@ a {
 }
 
 @media (max-width: 992px) {
+    .header__nav {
+        margin-left: 0;
+    }
+
     .nav__item {
         margin-right: 35px;
     }
@@ -272,38 +283,47 @@ a {
     .nav__item:last-child {
         margin-right: 0;
     }
-    .header__logo-text {
-        display: none;
-    }
 
     .nav__list {
         font-size: 14px;
     }
 }
 
-@media (max-width: 660px) {
-    .nav__list {
+@media (max-width: 848px) {
+    .header__container {
         flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 20px;
+        padding-bottom: 10px;
     }
 
-    .nav__item {
-        flex: 1 0 50%;
-        margin: 0;
-        border-radius: 5px;
-    }
-
-    .nav__item:hover {
-        background-color: #eea291;
-    }
-
-    .nav__link {
-        display: block;
-        padding: 10px;
-        text-align: center;
+    .header__logo-text {
+        font-size: 24px;
     }
 
     .header__button {
-        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .header__nav {
+        margin-top: 15px;
+        flex: 1 1 100%;
+        order: 3;
+    }
+
+    .nav__list {
+        justify-content: space-between;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 492px) {
+    .nav__item {
+        margin-right: 10px;
+    }
+
+    .nav__list {
+        font-size: 12px;
     }
 }
 
@@ -313,11 +333,13 @@ a {
         min-height: 251px;
     }
 
+    .header__logo-text {
+        display: none;
+    } 
+
     .header {
         background-color: rgba(242, 120, 92, 0);
         box-shadow: none;
-        /* overflow: hidden;
-        min-height: 251px; */
     }
     
     .header__container {
@@ -504,6 +526,18 @@ a {
         max-width: 600px;
         font-size: 64px;
     }
+
+    .preview__text {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 848px) {
+    .preview {
+        padding-top: 160px;
+        padding-bottom: 60;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -520,11 +554,14 @@ a {
     }
 }
 
-@media (max-width: 587px) {
-    .preview__text {
-        display: none;
+@media (max-width: 585px) {
+    .preview__title {
+        font-size: 60px;
     }
 
+    .preview__text {
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -533,7 +570,8 @@ a {
     }
     
     .preview__title {
-        font-size: 48px;
+        font-size: 40px;
+        line-height: 50px;
     }
     
     .preview__form {
@@ -566,6 +604,10 @@ a {
     }
 
     .preview__title {
+        display: none;
+    }
+
+    .preview__text {
         display: none;
     }
 
@@ -658,6 +700,10 @@ a {
 
     .steps__item:nth-child(3) .steps__wrap {
         text-align: right;
+    }
+
+    .steps__item:nth-child(1) .steps__wrap .steps__text {
+        max-width: 150px;
     }
 }
 
@@ -1339,19 +1385,41 @@ a {
     background-image: url(../img/footer-icons-twitter.svg);
 }
 
-@media (max-width: 862px) {
-    
-    .footer__copy {
-        display: none;
+@media (max-width: 1212px) {
+    .footer__container {
+        justify-content: space-between;
     }
 
+    .footer__copy {
+        flex: 0 0 auto;
+        padding-left: 0;
+    }
+    
     .footer__links {
-        flex: 0 1 100%;
+        flex: 0 0 auto;
         justify-content: center;
+        padding-left: 0;
     }
 
     .footer__link:nth-child(1) {
         margin-left: 6px;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer__copy {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer__container {
+        justify-content: center;
+    }
+    .footer__copy {
+        flex: 1 1 100%;
+        text-align: center;
+        font-size: 12px;
     }
 }
 
@@ -1360,4 +1428,7 @@ a {
         background-image: url(../img/stories-background-390.jpg);
     }
     
+    .footer__copy {
+        display: none;
+    }
 }
