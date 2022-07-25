@@ -22,3 +22,61 @@ document.addEventListener('click', function(event) {
     }
 })
 
+
+
+const widthContent = document.querySelector('.destinations__slider-container').clientWidth;
+const slider = document.querySelector('.destinations__slider');
+const sliderItems = document.querySelectorAll('.destinations__photo');
+const radioItems = document.querySelectorAll('.radio__input');
+const buttons = document.querySelector('.destinations__buttons')
+const quantitySliderItems = sliderItems.length;
+const widthSlider = widthContent * quantitySliderItems;
+const prev = document.querySelector('.destinations__prev');
+const next = document.querySelector('.destinations__next');
+let startPosition = -widthContent
+let position = startPosition;
+let positionRadio = 0;
+
+slider.style.transform = `translate(${position}px)`;
+
+for(let item of sliderItems) {
+  item.style.minWidth = widthContent + 'px';
+}
+
+checkButton();
+prev.addEventListener('click', function() {
+  position += widthContent;
+  slider.style.transform = `translate(${position}px)`;
+  checkButton();
+  radioItems[--positionRadio].checked = true;
+});
+
+next.addEventListener('click', function() {
+  position -= widthContent;
+  slider.style.transform = `translate(${position}px)`;
+  checkButton();
+  radioItems[++positionRadio].checked = true;
+});
+
+function checkButton() {
+  if(position === startPosition) {
+    prev.style.pointerEvents = 'none';
+    prev.style.opacity = '0.5';
+}else if(position === -(widthContent * (quantitySliderItems - 2))) {
+    next.style.pointerEvents = 'none'
+    next.style.opacity = '0.5';
+}else {
+    prev.style.pointerEvents = 'auto';
+    prev.style.opacity = '1';
+    next.style.pointerEvents = 'auto';
+    next.style.opacity = '1';
+  }
+}
+
+buttons.addEventListener('click', function(event) {
+  if(event.target.gatName === 'DIV') { return;}
+  positionRadio = event.target.value - 1;
+  position = -((event.target.value) * widthContent);
+  slider.style.transform = `translate(${position}px)`;
+  checkButton();
+})
