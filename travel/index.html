@@ -60,7 +60,7 @@
                     <li class="navbar__item">
                         <a href="#stories" class="navbar__link">Travel Stories</a>
                     </li>
-                    <li class="navbar__item">
+                    <li class="navbar__item navbar__item_account">
                         <a href="#" class="navbar__link">Account</a>
                     </li>
                     <li class="navbar__item">
@@ -114,39 +114,53 @@
             <section class="destinations" id="destinations">
                 <div class="destinations__container">
                     <h2 class="destinations__title title">Popular destinations</h2>
-                    <div class="destinations__row">
-                        <div class="destinations__slider">
-                            <div class="destinations__photo">
-                                <img class="destinations__img" src="./img/destinations-sea.jpg" alt="photo Spain">
-                                <img class="destinations__img-small" src="./img/destinations-sea-390.jpg" alt="photo Spain">
-                                <span class="destinations__text">Spain</span>
+                        <div class="destinations__slider-container">
+                            <div class="destinations__prev"></div>
+                            <div class="destinations__slider">
+                                <div class="destinations__photo destinations__photo-decor">
+                                    <img class="destinations__img" src="./img/destinations-usa.jpg" alt="photo Spain">
+                                    <img class="destinations__img-small" src="./img/destinations-usa-390.jpg" alt="photo Spain">
+                                    <span class="destinations__text">Spain</span>
+                                </div>
+                                <div class="destinations__photo">
+                                    <img class="destinations__img" src="./img/destinations-sea.jpg" alt="photo Spain">
+                                    <img class="destinations__img-small" src="./img/destinations-sea-390.jpg" alt="photo Spain">
+                                    <span class="destinations__text">Spain</span>
+                                </div>
+                                <div class="destinations__photo">
+                                    <img class="destinations__img" src="./img/destinations-jap.jpg" alt="photo Japan">
+                                    <img class="destinations__img-small" src="./img/destinations-jap-390.jpg" alt="photo Japan">
+                                    <span class="destinations__text">Japan</span>
+                                </div>
+                                <div class="destinations__photo">
+                                    <img class="destinations__img" src="./img/destinations-usa.jpg" alt="photo USA">
+                                    <img class="destinations__img-small" src="./img/destinations-usa-390.jpg" alt="photo USA">
+                                    <span class="destinations__text">Usa</span>
+                                </div>
+                                <div class="destinations__photo destinations__photo-decor">
+                                    <img class="destinations__img" src="./img/destinations-sea.jpg" alt="photo Spain">
+                                    <img class="destinations__img-small" src="./img/destinations-sea-390.jpg" alt="photo Spain">
+                                    <span class="destinations__text">Spain</span>
+                                </div>
                             </div>
-                            <div class="destinations__photo">
-                                <img class="destinations__img" src="./img/destinations-jap.jpg" alt="photo Japan">
-                                <img class="destinations__img-small" src="./img/destinations-jap-390.jpg" alt="photo Japan">
-                                <span class="destinations__text">Japan</span>
-                            </div>
-                            <div class="destinations__photo">
-                                <img class="destinations__img" src="./img/destinations-usa.jpg" alt="photo USA">
-                                <img class="destinations__img-small" src="./img/destinations-usa-390.jpg" alt="photo USA">
-                                <span class="destinations__text">Usa</span>
-                            </div>
+                            <div class="destinations__next"></div>
                         </div>
-                        <div class="destinations__switch">
-                            <label class="destinations__radio radio">
-                                <input class="radio__input" type="radio" name="switch" value="spain">
-                                <span class="radio__box"></span>
-                            </label>
-                            <label class="destinations__radio radio">
-                                <input class="radio__input" type="radio" name="switch" value="spain" checked>
-                                <span class="radio__box"></span>
-                            </label>
-                            <label class="destinations__radio radio">
-                                <input class="radio__input" type="radio" name="switch" value="spain">
-                                <span class="radio__box"></span>
-                            </label>
-                        </div>
-                    </div>
+                            <div class="destinations__switch">
+                                <div class="destinations__buttons">
+                                    <label class="destinations__radio radio">
+                                        <input class="radio__input" type="radio" name="switch" value="1" checked>
+                                        <span class="radio__box"></span>
+                                    </label>
+                                    <label class="destinations__radio radio">
+                                        <input class="radio__input" type="radio" name="switch" value="2">
+                                        <span class="radio__box"></span>
+                                    </label>
+                                    <label class="destinations__radio radio">
+                                        <input class="radio__input" type="radio" name="switch" value="3">
+                                        <span class="radio__box"></span>
+                                    </label>
+                                </div>
+                            </div>
                     <button class="destinations__button button button_arrow">Find More</button>
                 </div>
             </section>
@@ -223,6 +237,50 @@
                 </ul>
             </div>
         </footer>
+        <div class="popup">
+            <div class="popup__body">
+                <div class="popup__login popup__content">
+                    <h3 class="popup__title">Log in to your account</h3>
+                    <button class="popup__facebook popup__button">Sign In with Facebook</button>
+                    <button class="popup__google popup__button">Sign In with Google</button>
+                    <span class="popup__span">or</span>
+                    <form action="" class="popup__form">
+                        <label class="popup__label">
+                            E-mail
+                            <input class="popup__input" type="text">
+                        </label>
+                        <label class="popup__label">
+                            Password
+                            <input class="popup__input" type="password">
+                        </label>
+                        <button class="popup__signin popup__button" type="submit">Sign In</button>
+                    </form>
+                    <a href="#" class="popup__help">Forgot Your Password?</a>
+                    <p class="popup__other-action">
+                        Don’t have an account?
+                        <a href="#" class="popup__link popup__link_login">Register</a>
+                    </p>
+                </div>
+                <div class="popup__register popup__content">
+                    <h3 class="popup__title">Create account</h3>
+                    <form action="" class="popup__form">
+                        <label class="popup__label">
+                            E-mail
+                            <input class="popup__input" type="text">
+                        </label>
+                        <label class="popup__label">
+                            Password
+                            <input class="popup__input" type="password">
+                        </label>
+                        <button class="popup__signup popup__button" type="submit">Sign Up</button>
+                    </form>
+                    <p class="popup__other-action">
+                        Already have an account?
+                        <a href="#" class="popup__link popup__link_register">Log in</a>
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="./index.js"></script>
     <script src="./script.js"></script>
