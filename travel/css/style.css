@@ -1441,3 +1441,341 @@ a {
         display: none;
     }
 }
+
+
+/* ---------------------------------------------------POPUP--------------------------------------------------------- */
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 2s, background-color 0.5s ease;
+    z-index: 9999;
+}
+
+.popup._active {
+    opacity: 1;
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: opacity 0.1s, background-color 0.5s ease;
+}
+
+.popup__body {
+    
+}
+
+.popup__content {
+    position: relative;
+    top: -770px;
+    display: flex;
+    flex-direction: column;
+    max-width: 650px;
+    padding: 25px 45px;
+    margin: 0 auto;
+    background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
+    border-radius: 16px;
+    
+    transition: all 0.3s ease-in;
+}
+
+.popup._active .popup__content {
+    top: 100px;
+}
+
+.popup._active .popup__register {
+    top: 150px;
+}
+
+.popup__content::after {
+    content: "";
+    position: absolute;
+    width: 560px;
+    height: 1px;
+    bottom: 61px;
+    left:45px;
+    background-color:rgba(13, 96, 111, 0.5);
+}
+
+.popup__login {
+}
+
+.popup__title {
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Aleo';
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: #0D606F;
+}
+
+.popup__button {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 15px 0;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+    border-radius: 10px;
+    border-style: none;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+}
+
+.popup__button:hover {
+    cursor: pointer;
+}
+
+.popup__facebook {
+    position: relative;
+    padding-left: 39px;
+    margin-bottom: 20px;
+    background-color: #1877F2;
+}
+
+.popup__facebook::before,
+.popup__google::before {
+    content: "";
+    position: absolute;
+    background-image: url(/travel/img/icon-facebook.svg);
+    width: 24px;
+    height: 24px;
+    top: 16px;
+    left: 29%;
+}
+
+.popup__google {
+    position: relative;
+    padding-left: 39px;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    color: #0D606F;
+}
+
+.popup__google::before {
+    background-image: url(/travel/img/icon-google.svg);
+    left: 31%;
+}
+
+.popup__span {
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Aleo';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(13, 96, 111, 0.5);
+}
+
+.popup__span::before,
+.popup__span::after {
+    content: "";
+    position: absolute;
+    width: 46%;
+    height: 1px;
+    background-color: rgba(13, 96, 111, 0.5);
+    top: 50%; 
+}
+
+.popup__span::before {
+    left: 0;
+}
+
+.popup__span::after {
+    right: 0;
+}
+
+.popup__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup__label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    font-family: 'Aleo';
+    font-size: 16px;
+    line-height: 19px;
+    color: #0D606F;
+}
+
+.popup__input {
+    margin-top: 5px;
+    border-style: none;
+    height: 54px;
+    box-shadow: inset 0px 0px 3px rgba(13, 96, 111, 0.08), inset 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    color:#0D606F;
+    font-size: 16px;
+}
+
+.popup__signin, 
+.popup__signup{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    background-color: #0D606F;
+}
+
+.popup__help {
+    display: block;
+    text-align: center;
+    font-family: 'Aleo';
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    text-decoration-line: underline;
+    color: #0D606F;
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+}
+
+.popup__other-action {
+    margin: 0;
+    margin-top: 42px;
+    text-align: center;
+    font-family: 'Aleo';
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    color: rgba(13, 96, 111, 0.5);
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+}
+
+.popup__link {
+    font-family: 'Aleo';
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    text-decoration-line: underline;
+    color: #0D606F;
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+}
+
+.popup__register {
+    display: none;
+}
+
+@media(max-width: 687px) {
+    .popup__content {
+       max-width: 450px;
+       padding: 15px 30px;
+    }
+
+    .popup._active .popup__content {
+        top: 70px;
+    }
+
+    .popup__title {
+        font-size: 24px;
+        line-height: 26px;
+    }
+
+    .popup__button {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .popup__facebook::before,
+    .popup__google::before {
+        top: 12px;
+        left: 25%;
+    }
+
+    .popup__span {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .popup__label {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .popup__help {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .popup__link {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .popup__other-action {
+        font-size: 12px;
+        line-height: 14px;
+        margin-top: 25px;
+    }
+
+    .popup__content::after {
+        width: 390px;
+        left: 30px;
+        bottom: 40px;
+    }
+}
+
+@media(max-width: 475px) {
+    .popup__content {
+       max-width: 320px;
+       padding: 15px 20px;
+    }
+
+    .popup._active .popup__content {
+        top: 50px;
+    }
+    
+    .popup__title {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 20px;
+    }
+
+    .popup__button {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .popup__facebook::before,
+    .popup__google::before {
+        left: 20%;
+    }
+
+    .popup__span {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .popup__label {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .popup__help {
+        font-size: 11px;
+        line-height: 13px;
+    }
+
+    .popup__link {
+        font-size: 11px;
+        line-height: 13px;
+    }
+
+    .popup__other-action {
+        font-size: 12px;
+        line-height: 14px;
+        margin-top: 25px;
+    }
+
+    .popup__content::after {
+        width: 280px;
+        left: 20px;
+        bottom: 40px;
+    }
+}

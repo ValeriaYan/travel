@@ -60,7 +60,7 @@
                     <li class="navbar__item">
                         <a href="#stories" class="navbar__link">Travel Stories</a>
                     </li>
-                    <li class="navbar__item">
+                    <li class="navbar__item navbar__item_account">
                         <a href="#" class="navbar__link">Account</a>
                     </li>
                     <li class="navbar__item">
@@ -237,6 +237,50 @@
                 </ul>
             </div>
         </footer>
+        <div class="popup">
+            <div class="popup__body">
+                <div class="popup__login popup__content">
+                    <h3 class="popup__title">Log in to your account</h3>
+                    <button class="popup__facebook popup__button">Sign In with Facebook</button>
+                    <button class="popup__google popup__button">Sign In with Google</button>
+                    <span class="popup__span">or</span>
+                    <form action="" class="popup__form">
+                        <label class="popup__label">
+                            E-mail
+                            <input class="popup__input" type="text">
+                        </label>
+                        <label class="popup__label">
+                            Password
+                            <input class="popup__input" type="password">
+                        </label>
+                        <button class="popup__signin popup__button" type="submit">Sign In</button>
+                    </form>
+                    <a href="#" class="popup__help">Forgot Your Password?</a>
+                    <p class="popup__other-action">
+                        Don’t have an account?
+                        <a href="#" class="popup__link popup__link_login">Register</a>
+                    </p>
+                </div>
+                <div class="popup__register popup__content">
+                    <h3 class="popup__title">Create account</h3>
+                    <form action="" class="popup__form">
+                        <label class="popup__label">
+                            E-mail
+                            <input class="popup__input" type="text">
+                        </label>
+                        <label class="popup__label">
+                            Password
+                            <input class="popup__input" type="password">
+                        </label>
+                        <button class="popup__signup popup__button" type="submit">Sign Up</button>
+                    </form>
+                    <p class="popup__other-action">
+                        Already have an account?
+                        <a href="#" class="popup__link popup__link_register">Log in</a>
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="./index.js"></script>
     <script src="./script.js"></script>
