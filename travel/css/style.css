@@ -970,12 +970,12 @@ a {
     } 
     
     .destinations__prev{
-        background: url(../travel/img/slider-arrow-left.svg) no-repeat;
+        background: url(../img/slider-arrow-left.svg) no-repeat;
       left: 10px;
     }
     
     .destinations__next {
-        background: url(../travel/img/slider-arrow-right.svg) no-repeat;
+        background: url(../img/slider-arrow-right.svg) no-repeat;
       right: 10px;
     }
     
@@ -1543,7 +1543,7 @@ a {
 .popup__google::before {
     content: "";
     position: absolute;
-    background-image: url(../travel/img/icon-facebook.svg);
+    background-image: url(../img/icon-facebook.svg);
     width: 24px;
     height: 24px;
     top: 16px;
@@ -1559,7 +1559,7 @@ a {
 }
 
 .popup__google::before {
-    background-image: url(../travel/img/icon-google.svg);
+    background-image: url(../img/icon-google.svg);
     left: 31%;
 }
 
