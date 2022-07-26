@@ -26,7 +26,6 @@ document.addEventListener('click', function(event) {
     if(event.target != menu && event.target.parentElement != menu && event.target != burger && event.target.parentElement != burger && menu.classList.contains('_active')) {
         menu.classList.remove('_active');
         shadow.classList.remove('_active');
-        console.log(event.target);
     }
 })
 
@@ -114,7 +113,6 @@ btnLog.addEventListener('click', function(){
 })
 
 popup.addEventListener('click', function(event){
-  console.log(event.target);
   if(event.target.classList.contains('popup__body') || event.target.classList.contains('popup')) {
     popup.classList.remove('_active');
     document.body.style.overflow = 'auto';
