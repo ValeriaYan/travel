@@ -1,11 +1,3 @@
-
-
-if(!sessionStorage.getItem('greeted')){
-  alert('Пожалуйста, перезагружай страницу после изменения ширины экрана, чтобы слайдер перестраивался');
-  sessionStorage.setItem('greeted', true);
-}
-
-
 const burger = document.querySelector('.header__burger');
 const burgerSpan = document.querySelectorAll('.header__burger');
 const menu = document.querySelector('.header__navbar');
